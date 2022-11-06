@@ -18,6 +18,11 @@ private:
     void InitGpio(GPIO_TypeDef* pOutGpio, uint16_t pOutPin);
 
     TIM_HandleTypeDef timServo;
+
+    uint16_t mConfigChannel;
+    uint32_t mFreq;
+
+    uint32_t getClockFreq(TIM_TypeDef* pTimer);
 };
 
 #endif //__SERVO_H__
